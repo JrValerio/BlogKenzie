@@ -17,14 +17,18 @@ p {
 }
 
 body {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   background-color: rgb(214, 216, 219);
 }
 
-a {
+header a {
   color: inherit;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  height: bold;
+  font-size: 18px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.603);
 }
 
 h1 {
@@ -43,8 +47,15 @@ section * img {
   display: block;
 }
 
+.trash {
+  padding-top: 15px;
+}
+
 .header {
-  background: #1d1e20;
+  background-image: url(./Fundo-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(0, 0, 0, 0.274);
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -56,25 +67,16 @@ section * img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
+  color: black;
 }
 
 .menu li {
-  margin-left: 10px;
+  margin-left: 10px;  
 }
 
 .menu li a {
   display: block;
-  padding: 10px;
-}
-
-main {
-  animation: topdown 700ms 350ms backwards;
-}
-
-.header-logo {
-  width: 100px;
-  height: 100px;
-  position: initial;
   padding: 10px;
 }
 
@@ -86,16 +88,38 @@ main {
 }
 
 .logo_kenzie {
-  display: flex;
-  justify-content: center;
+  display: flex;   
   flex-direction: column;
-  margin-bottom: 30px;
+  width: 15000px;    
   margin-top: 0px;
 }
-.grid1 .anuncio p {
-  font-size: 16px;
+
+main {
+  animation: topdown 700ms 350ms backwards;
+}
+
+main a {
+  color: inherit;
+  text-decoration: none;
+  color: rgb(248, 247, 247);
+  height: bold;   
+}
+
+em {
+  margin-top: 15px;  
+}
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  position: initial;
+  padding: 10px;
+}
+
+.grid1 .announcement p {
+  font-size: 14px;
   font-weight: 200;
-  text-align: justify;
+  text-align: justify;  
 }
 
 .grid1 {
@@ -106,24 +130,33 @@ main {
   margin: 0 auto;
   grid-gap: 20px;
 }
+
+.grid1 p {
+  padding-top: 5px;
+}
+
 .grid1 div p {
-  font-weight: bold;
-  margin-top: 10px;
-  font-size: 13px;
+  margin-bottom: 30px;  
 }
 
 .grid1 > div:nth-child(n + 4) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  align-items: center;
+  align-items: center;  
 }
 
-.grid1 > div.anuncio {
+.grid1 > article.announcement {
   grid-column: 1;
   grid-row: 2 / 5;
   border-top: 10px;
-  display: block;
+  display: block;  
+}
+
+article {
+  text-align: justify;
+  font-size: 14px;
+  
 }
 
 @media (max-width: 600px) {
@@ -133,7 +166,7 @@ main {
   .grid1 > div:nth-child(n + 4) {
     display: block;
   }
-  .grid1 > div.anuncio {
+  .grid1 > article.announcement {
     grid-column: auto;
     grid-row: auto;
     order: -1;
@@ -145,22 +178,23 @@ main {
   grid-template-columns: 1fr 200px;
   grid-gap: 20px;
   max-width: 800px;
-  padding: 10px;
+  padding: 30px;
   margin: 0 auto;
 }
 
-.destaque {
-  text-align: justify;
+.emphasis {
+  text-align: justify;  
+  font-size: 17px;
 }
 
 .sidebar > div {
   margin-bottom: 10px;
 }
 
-.navegador {
+.browser {
   /*a propriedade inherit faz com que a tag <a> herde a cor do elemento pai <li>*/
   color: inherit;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 .sidebar div p {
@@ -229,17 +263,11 @@ main {
   
   .flex div p {
     font-weight: bold;
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: justify;
   }
   
-.cadastro {
-  display: block;
-  text-align: center;
-  font-family: sans-serif;
-  color: black;
-}
-
 .container {
   width: 80%;
   height: 80vh;
@@ -252,7 +280,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fde3a7d7;
+  background: #333333d5;
   padding: 1rem;
 }
 
@@ -271,22 +299,13 @@ main {
 }
 
 .form-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
-.login-button {
-  display: flex;
-  align-items: center;
-}
-
-.login-button button {
-  border: none;
-  background-color: #6c63ff;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+.form-header p {
+  padding-top: 20px;
 }
 
 .form-header h2::after {
@@ -294,7 +313,7 @@ main {
   display: block;
   width: 5rem;
   height: 0.3rem;
-  background-color: #6c63ff;
+  background-color: #333333d5;
   margin: 0 auto;
   position: absolute;
   border-radius: 10px;
@@ -381,25 +400,25 @@ main {
   padding: 0 0.5rem;
 }
 
-.input-tec {
+.input-tech {
   display: flex;
   justify-content: space-between;
   margin-top: 0.62rem;
   padding: 0 0.5rem;
 }
 
-.tec-group {
+.tech-group {
   margin-left: 0.5rem;
   font-size: 10px;
 }
 
-.tec-group label {
+.tech-group label {
   font-size: 0.69rem;
   font-weight: 900;
   color: #000000c0;
 }
 
-.mensagem {
+.mensage {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -482,10 +501,10 @@ footer {
     max-height: 10rem;
     padding-left: 5rm;
   }
-  .tec-group .div-group {
+  .tech-group .div-group {
     margin-top: 2rem;
   }
-  .input-tec .input-dev {
+  .input-tech .input-dev {
     flex-direction: column;
   }
 }

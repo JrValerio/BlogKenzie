@@ -38,6 +38,15 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 15px;  
   margin-top: 10px;
   color: black;
 }
